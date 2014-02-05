@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 color_re = re.compile('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$')
-validate_color = RegexValidator(color_re, _(u'Enter a valid hex color (without the leading #).'), 'invalid')
+validate_color = RegexValidator(color_re, _(u'Enter a valid hex color.'), 'invalid')
 
 
 class ColorInput(TextInput):
