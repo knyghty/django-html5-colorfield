@@ -1,8 +1,10 @@
 #!/usr/bin/env python
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 
-from distutils.core import setup
-
-version = '0.1.1'
+version = '1.0'
 
 setup(
     name="django-html5-colorfield",
@@ -10,6 +12,7 @@ setup(
     keywords=["django", "color"],
     author='Tom Carrick',
     author_email='knyght@knyg.ht',
+    url='https://pypi.python.org/pypi/django-html5-colorfield/',
     license='MIT',
     long_description="Provides an HTML5 color field for use in django models",
     description="Provides an HTML5 color django model field",
