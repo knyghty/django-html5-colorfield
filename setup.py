@@ -12,7 +12,7 @@ setup(
     keywords=["django", "color"],
     author='Tom Carrick',
     author_email='knyght@knyg.ht',
-    url='https://pypi.python.org/pypi/django-html5-colorfield/',
+    url='https://github.com/knyghty/django-html5-colorfield',
     license='MIT',
     long_description="Provides an HTML5 color field for use in django models",
     description="Provides an HTML5 color django model field",
