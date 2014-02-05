@@ -10,3 +10,14 @@ Thanks
 
 Many thanks to Jared Forsyth and others for the original javascript version of
 this package.
+
+Usage
+=====
+
+::
+
+    from colorfield.fields import ColorField
+    
+
+    class MyModel(models.Model):
+        color = ColorField()
