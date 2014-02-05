@@ -1,23 +1,17 @@
 import re
 
-from django import forms
 from django.db import models
-from django.conf import settings
 from django.core.validators import RegexValidator
-from django.template.loader import render_to_string
+from django.forms import TextInput
 from django.utils.translation import ugettext_lazy as _
 
 
-color_re = re.compile('^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$')
+color_re = re.compile('^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$')
 validate_color = RegexValidator(color_re, _(u'Enter a valid hex color (without the leading #).'), 'invalid')
 
 
-class ColorWidget(forms.Widget):
-    class Media:
-        js = [settings.STATIC_URL + 'jscolor/jscolor.js']
-
-    def render(self, name, value, attrs=None):
-        return render_to_string('colorfield/color.html', locals())
+class ColorInput(TextInput):
+    input_type = 'color'
 
 
 class ColorField(models.CharField):
@@ -28,7 +22,7 @@ class ColorField(models.CharField):
         super(ColorField, self).__init__(*args, **kwargs)
 
     def formfield(self, **kwargs):
-        kwargs['widget'] = ColorWidget
+        kwargs['widget'] = ColorInput
         return super(ColorField, self).formfield(**kwargs)
 
 try:
@@ -36,4 +30,3 @@ try:
     add_introspection_rules([], ['^colorfield\.fields\.ColorField'])
 except ImportError:
     pass
-
