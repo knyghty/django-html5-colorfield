@@ -5,11 +5,11 @@ from distutils.core import setup
 version = '0.1.1'
 
 setup(
-    name="django-colorfield",
+    name="django-html-colorfield",
     version=version,
     keywords=["django", "color"],
-    author='Jared Forsyth',
-    author_email='jared@jaredforsyth.com',
+    author='Tom Carrick',
+    author_email='knyght@knyg.ht',
     license='MIT',
     long_description="A small app providing a colorpicker field for django",
     description="A small app providing a colorpicker field for django",
