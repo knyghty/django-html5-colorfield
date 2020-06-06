@@ -22,4 +22,4 @@ jobs:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
           TWINE_NON_INTERACTIVE: 1
-        run: twine upload
+        run: twine upload dist/*
