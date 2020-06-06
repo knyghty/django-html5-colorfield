@@ -1,0 +1,7 @@
+# Development requirements.
+black
+django
+flake8
+flake8-bugbear
+isort
+twine

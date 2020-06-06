@@ -2,16 +2,15 @@ Django HTML5 Colorfield
 #######################
 
 This module fills the need of having a 'colorfield' that's usable in both
-django models and forms. Requires django 1.7+.
-
+django models and forms.
 
 Usage
 =====
 
 ::
 
-    from colorfield.fields import ColorField
-    
+    from colorfield import ColorField
+
 
     class MyModel(models.Model):
         color = ColorField()
