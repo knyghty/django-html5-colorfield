@@ -28,6 +28,6 @@ jobs:
       - name: Run flake8
         run: flake8 --count --show-source --statistics
       - name: Run isort
-        run: isort -c
+        run: isort . --check
       - name: Run tests
         run: python runtests.py
